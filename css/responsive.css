@@ -1,52 +1,95 @@
-@media (max-width: 1399px) {
-  body {
-    text-align: center !important;
-    overflow-x: hidden !important;
-  }
+    @media (max-width: 1399px) {
+      body {
+        text-align: center !important;
+        overflow-x: hidden !important;
+      }
 
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 22px;
-  }
+      h1 {
+        font-size: 40px;
+      }
 
-  h5, p {
-    font-size: 18px;
-    line-height: 25px;
-  }
+      h2 {
+        font-size: 22px;
+      }
 
-  span {
-    letter-spacing: 10px;
-  }
+      h5,
+      p {
+        font-size: 18px;
+        line-height: 25px;
+      }
 
-  .navbar {
-    display: none;
-  }
+      span {
+        letter-spacing: 10px;
+      }
 
-  .rodape .px-5 {
-    padding: 0 !important;
-  }
+      .navbar {
+        display: none;
+      }
 
-  .videoyt {
-    width: 80%;
-  }
+      .rodape .px-5 {
+        padding: 0 !important;
+      }
 
+      .videoyt {
+        width: 80%;
+      }
+
+    }
+
+    @media (max-width: 900px) {
+
+      /* sec-01 */
+      .secao-01 {
+        padding: 50px 0 400px;
+        background: url("../assets/header01-mobile.png") top/cover no-repeat;
+        height: 100vh;
+        color: var(--branco);
+      }
+
+      .secao-05,
+      .secao-06,
+      .secao-07,
+      .secao-08 {
+        text-align: left;
+      }
+
+    }
+
+#loading {
+  position: fixed;
+  inset: 0;
+  background: url("../assets/bg/fundo-prata.png") top/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: slideDown 3s ease;
 }
 
-@media (max-width: 900px) {
+@keyframes slideDown {
+  0% {
+    transform: translateY(0%);
+  }
 
-/* sec-01 */
-.secao-01 {
-  padding: 50px 0 400px;
-  background: url("../assets/header01-mobile.png") top/cover no-repeat;
-  height: 100vh;
-  color: var(--branco);
+  100% {
+    transform: translateY(100%);
+  }
 }
 
-.secao-05, .secao-06, .secao-07, .secao-08 {
-  text-align: left;
+.logo {
+  animation: pulse 1.4s infinite ease-in-out;
 }
 
-}
+@keyframes pulse {
 
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 0.7;
+  }
+}
